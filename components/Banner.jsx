@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 const Banner = () => {
@@ -27,12 +28,14 @@ const Banner = () => {
             name=""
             className=" h-12 outline-none px-3 text-lg border-r-2 border-gray-400 col-span-1 "
           />
-          <button
-            className="h-12 px-3 p-2 col-span-1 bg-green-400 hover:cursor-pointer text-xl hover:bg-green-600 text-white "
-            type="submit"
-          >
-            Search
-          </button>
+          <Link href={"/hotels"}>
+            <button
+              className="h-12 px-3 p-2 col-span-1 bg-green-400 hover:cursor-pointer text-xl hover:bg-green-600 text-white "
+              type="submit"
+            >
+              Search
+            </button>
+          </Link>
         </div>
         <div className="flex mx-20 my-5  font-bold ">
           <button
