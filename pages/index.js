@@ -1,3 +1,5 @@
+// pages/index.js
+
 import React from "react";
 import Header1 from "../components/Header1";
 import Header2 from "@/components/Header2";
@@ -12,14 +14,14 @@ const Home = () => {
     <div>
       <Head>
         <title>
-          OYO : India's best Online hotel Booking Site For Sanitized Stay.
+          OYO: India's best Online hotel Booking Site For Sanitized Stay.
         </title>
       </Head>
       <Header1 />
       <Header2 />
       <Banner />
       <div className="mx-10">
-        <div className=" my-15">
+        <div className="my-15">
           <Image
             src={"/banner1.avif"}
             alt="banner1"
@@ -28,7 +30,7 @@ const Home = () => {
             className="h-80 w-full "
           />
         </div>
-        <div className=" my-15">
+        <div className="my-15">
           <Image
             src={"/banner2.avif"}
             alt="banner1"
