@@ -1,8 +1,16 @@
+"use client";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
+import Cookies from "js-cookie";
+import Link from "next/link";
 
 const SingleHotel = ({ hotel }) => {
+  let auth;
+  console.log(Cookies.get("token"));
+  if (typeof window !== "undefined") {
+    auth = Cookies.get("token");
+  }
   return (
     <>
       <Head>
@@ -40,9 +48,21 @@ const SingleHotel = ({ hotel }) => {
               </li>
             ))}
           </ul>
-          <button className="w-60 h-14 rounded-lg bg-red-400 my-5 text-lg  ">
-            Book Now
-          </button>
+          {true ? (
+            <button className="w-60 h-14 rounded-lg bg-red-400 my-5 text-lg  ">
+              Book Now
+            </button>
+          ) : (
+            <span className="text-2xl">
+              {" "}
+              Please{" "}
+              <Link className="text-red-500" href={"/login"}>
+                {" "}
+                Login{" "}
+              </Link>{" "}
+              to get offers{" "}
+            </span>
+          )}
         </div>
       </div>
     </>

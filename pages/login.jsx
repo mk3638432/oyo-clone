@@ -19,7 +19,7 @@ const login = () => {
       name,
     });
     if (res) {
-      Cookies.set("token", res.data.token);
+      Cookies.set("token", res.data.token, { expires: 7 });
       console.log(res);
       router.push("/");
     }
@@ -29,8 +29,7 @@ const login = () => {
     setLogin(true);
     const res = await axios.post("/api/user/login", { email, password });
     if (res) {
-      Cookies.set("token", res.data.token);
-      console.log(res);
+      Cookies.set("token", res.data.token, { expires: 7 });
       router.push("/");
     }
   };
