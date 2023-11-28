@@ -18,6 +18,7 @@ const Hotel = ({ data }) => {
           {data &&
             data.gallery.map((data, index) => (
               <Image
+                key={index}
                 src={data}
                 alt="hotel"
                 width={200}
