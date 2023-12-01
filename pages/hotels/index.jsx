@@ -17,7 +17,6 @@ const hotels = ({ hotels }) => {
       setChecked(newArr);
     }
   };
-  console.log(checked);
   useEffect(() => {
     handleCheckList();
   }, []);

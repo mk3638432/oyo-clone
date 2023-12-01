@@ -42,8 +42,8 @@ const SingleHotel = ({ hotel }) => {
           </button>
           <p className="text-3xl font-bold my-5">Facilities :</p>
           <ul className="flex text-xl  ">
-            {hotel?.facilities?.map((data) => (
-              <li className="mr-5 mb-3 flex items-center gap-1">
+            {hotel?.facilities?.map((data, i) => (
+              <li key={i} className="mr-5 mb-3 flex items-center gap-1">
                 {" "}
                 <span>
                   {" "}
